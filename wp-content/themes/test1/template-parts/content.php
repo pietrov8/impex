@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package m2n_theme
+ * @package impex
  */
 
 ?>
