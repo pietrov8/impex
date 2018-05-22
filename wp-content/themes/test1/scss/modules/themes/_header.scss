@@ -1,0 +1,210 @@
+.header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top:0;
+  z-index: 50;
+  background: rgba(26,26,26,0.7);
+  .logo {
+    background: #FFF;
+    float: left;
+    padding: 18px 26px 10px 24px;
+    img {
+      width: 286px;
+      height: 62px;
+    }
+    @include breakpoint(lg) {
+      padding: 19px 28px 9px 24px;
+      img {
+        max-width: 235px;
+        height: 51px;
+      }
+    }
+    @include breakpoint(sm) {
+      padding: 13px 18px 9px 15px;
+      img {
+        max-width: 160px;
+        height: 34px;
+      }
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__right {
+    float: right;
+    nav {
+      display: inline-block;
+      vertical-align: top;
+      @media all and (min-width: 1231px) {
+        display: inline-block !important;
+      }
+      @include breakpoint(lg) {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top:84px;
+        padding: 15px 0;
+        background: rgba(26,26,26,0.7);
+        display: none;
+      }
+      @include breakpoint(sm) {
+        top:62px;
+      }
+      ul {
+        li {
+          float: left;
+          &:not(:last-child) {
+            border-right: 1px solid #282828;
+          }
+          @include breakpoint(lg) {
+            width: 100%;
+            text-align: center;
+            border: none;
+          }
+          a {
+            display: block;
+            font-size: 14px;
+            color: #FFF;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 39px 16px 37px 14px;
+            @include breakpoint(lg) {
+              padding: 39px 10px 37px 10px;
+            }
+            @include breakpoint(lg) {
+              padding: 15px;
+            }
+            @include breakpoint(sm) {
+              font-size: 14px;
+              font-weight: bold;
+              padding: 0 0;
+              line-height: 36px;
+            }
+            letter-spacing: 0.5px;
+            position: relative;
+            &:after {
+              position: absolute;
+              left: 0;
+              right: 0;
+              bottom: -6px;
+              height: 6px;
+              background: $blue;
+              content: "";
+              opacity: 0;
+              transition: all 0.3s;
+            }
+          }
+          &.current,
+          &:hover {
+            a {
+              @include breakpoint(lg) {
+                color: $blue;
+              }
+              &:after {
+                opacity: 1;
+                @include breakpoint(lg) {
+                  opacity: 0 !important;
+                }
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+  &__lang {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    .current {
+      background: #23b9da;
+      display: block;
+      padding: 32px 36px 44px 34px;
+      @include breakpoint(lg) {
+        padding: 26px 30px 40px 30px;
+      }
+      @include breakpoint(sm) {
+        padding: 15px 17px 27px 23px;
+      }
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      position: relative;
+      color: #FFF;
+      text-decoration: none;
+      .fa {
+        position: absolute;
+        left: 50%;
+        bottom: 24px;
+        margin-left: -9px;
+        @include breakpoint(sm) {
+          bottom: 12px;
+          margin-left: -5px;
+        }
+      }
+    }
+    &.open {
+      ul {
+        display: block;
+      }
+    }
+    ul {
+      left: 0;
+      right: 0;
+      top:100%;
+      position: absolute;
+      background: rgba(26,26,26,0.95);
+      padding: 10px 0;
+      display: none;
+      li {
+        display: block;
+        a {
+          color: #FFF;
+          text-decoration: none;
+          font-size: 14px;
+          font-weight: bold;
+          text-align: center;
+          display: block;
+          margin: 4px 0;
+          &:hover {
+            color: $blue;
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint(lg) {
+    .menu-toggle {
+      display: inline-block;
+      width: 76px;
+      height: 85px;
+      position: relative;
+      vertical-align: top;
+      @include breakpoint(sm) {
+        width: 58px;
+        height: 73px;
+        margin: -13px -6px 0 -5px;
+      }
+      span {
+        background: #FFF;
+        width: 33px;
+        height: 5px;
+        position: absolute;
+        left: 13px;
+        &:nth-child(1) {
+          top:31px;
+        }
+        &:nth-child(2) {
+          top:42px;
+        }
+        &:nth-child(3) {
+          top:53px;
+        }
+      }
+    }
+  }
+}

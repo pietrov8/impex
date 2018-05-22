@@ -1,0 +1,107 @@
+.news-thumb {
+  overflow: hidden;
+  &__img {
+    float: left;
+    margin-right: 48px;
+    @include breakpoint(lg) {
+      width: 187px;
+      margin-right: 33px;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+  &__text {
+    overflow: hidden;
+    @include breakpoint(sm) {
+      width: 100%;
+      clear: both;
+    }
+  }
+  time {
+    font-size: 14px;
+    color: #676767;
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    margin: 14px 0 10px 0;
+    @include breakpoint(sm) {
+      font-size: 12px;
+      margin-top: 18px;
+    }
+  }
+  h3 {
+    font-size: 24px;
+    line-height: 31px;
+    font-weight: 300;
+    margin: 0 0 22px 0;
+    color: #FFF;
+    a {
+      color: #FFF;
+      &:hover {
+        color: $blue;
+      }
+    }
+    @include breakpoint(sm) {
+      font-size: 18px;
+      line-height: 28px;
+      margin: 0 0 12px 0;
+    }
+  }
+  .read-more {
+    color: $blue;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    @include breakpoint(sm) {
+      font-size: 13px;
+    }
+    .fa {
+      margin-left: 10px;
+      font-size: 12px;
+    }
+    &:hover {
+      color: #FFF;
+    }
+  }
+}
+
+.news-list {
+  &__loop {
+    .news-thumb {
+      margin-bottom: 50px;
+      position: relative;
+      @include breakpoint(sm) {
+        margin-bottom: 80px;
+        overflow: visible;
+        &:not(:last-child)
+        &:after {
+          position: absolute;
+          bottom: -40px;
+          left: -15px;
+          right: -15px;
+          height: 1px;
+          background: $gray-text;
+          content: "";
+          opacity: 0.5;
+        }
+      }
+      time {
+        margin: 33px 0 7px 0;
+        @include breakpoint(lg) {
+          margin-top: 15px;
+        }
+      }
+      p {
+        font-size: 18px;
+        line-height: 30px;
+        color: #868686;
+        margin: -9px 0 21px 0;
+        @include breakpoint(sm) {
+          font-size: 14px;
+          line-height: 25px;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

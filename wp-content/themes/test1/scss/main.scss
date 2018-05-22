@@ -1,0 +1,26 @@
+//----------------------------------*\
+// SETTINGS
+//----------------------------------*/
+@charset "UTF-8";
+
+//----------------------------------*\
+// COMPONENTS
+//----------------------------------*/
+
+@import "modules/base/base";
+
+
+@import "modules/themes/header";
+@import "modules/components/boxs";
+@import "modules/components/button";
+@import "modules/components/news-list";
+@import "modules/components/pagination";
+
+@import "modules/layout/home";
+@import "modules/layout/subpage";
+@import "modules/layout/news";
+@import "modules/layout/about";
+@import "modules/layout/contact";
+
+
+@import "modules/themes/footer";

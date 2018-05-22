@@ -1,0 +1,189 @@
+.news-article {
+  padding-top: 0;
+  .container {
+    max-width: 970px;
+    @include breakpoint(lg) {
+      max-width: 100%;
+    }
+  }
+  &__title {
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    height: 640px;
+    color: #FFF;
+    padding: 0 0 35px 0;
+    margin: 0 0 14px 0;
+    .container {
+      position: relative;
+      z-index: 11;
+    }
+    .inner {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      &:after {
+        position: absolute;
+        bottom: -35px;
+        left: 0;
+        right: 0;
+        top:-40px;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.7+62 */
+        background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 62%, rgba(0,0,0,0.7) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 62%,rgba(0,0,0,0.7) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 62%,rgba(0,0,0,0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#b3000000',GradientType=0 ); /* IE6-9 */
+        content: "";
+      }
+    }
+
+    @include breakpoint(sm) {
+      height: 480px;
+    }
+    time {
+      display: block;
+      width: 100%;
+      font-size: 14px;
+      font-family: 'Montserrat', sans-serif;
+      margin: 0 0 4px 6px;
+      letter-spacing: 1px;
+    }
+    h2 {
+      font-size: 48px;
+      font-weight: 300;
+      line-height: 60px;
+      margin: 0 -10px 0 0;
+      @include breakpoint(lg) {
+        font-size: 36px;
+        line-height: 46px;
+      }
+      @include breakpoint(sm) {
+        font-size: 28px;
+        line-height: 34px;
+      }
+    }
+  }
+  &__left {
+    float: left;
+    width: 100%;
+    max-width: 800px;
+    padding-left: 6px;
+    color: #868686;
+    @include breakpoint(lg) {
+      max-width: 100%;
+      padding-left: 0;
+    }
+    p {
+      font-size: 18px;
+      line-height: 30px;
+      color: #868686;
+      font-weight: 300;
+      letter-spacing: 0;
+      margin: 27px 0;
+      @include breakpoint(sm) {
+        font-size: 14px;
+        line-height: 24px;
+      }
+      &.top {
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.05rem;
+        margin: 24px 0 25px 0;
+        @include breakpoint(sm) {
+          font-size: 18px;
+          line-height: 28px;
+        }
+      }
+    }
+    blockquote {
+      margin-left: 15px;
+      padding-left: 15px;
+      border-left: 1px solid #868686;
+    }
+    a {
+      color: $blue;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    ul {
+      margin: -11px 0 -11px 30px;
+      padding: 0;
+      list-style: none;
+      font-size: 18px;
+      color: #868686;
+      li {
+        position: relative;
+        font-size: 18px;
+        padding: 0 0 6px 20px;
+        font-weight: 300;
+        @include breakpoint(sm) {
+          font-size: 14px;
+        }
+        &:after {
+          display: inline-block;
+          font: normal normal normal 14px/1 FontAwesome;
+          font-size: inherit;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          content: "\f105";
+          color: $blue;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top:4px;
+        }
+      }
+    }
+  }
+  &__right {
+    float: right;
+    margin: 30px -154px 0 0;
+    @include breakpoint(vb) {
+      margin-right: -100px;
+    }
+    @include breakpoint(lg) {
+      display: none;
+    }
+  }
+  &__bottom {
+    margin: 59px 0 -18px 0;
+    border-top: 1px solid #2a2a2a;
+    padding: 32px 0 0 0;
+  }
+}
+.socials {
+  span {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #868686;
+    margin: 0 5px 0 0;
+  }
+  a {
+    width: 39px;
+    height: 39px;
+    text-align: center;
+    line-height: 39px;
+    display: inline-block;
+    vertical-align: middle;
+    color: $blue;
+    background: #2e2e2e;
+    margin-right: -1px;
+    font-size: 14px;
+    transition: all 0.3s;
+    &:hover {
+      background: $blue;
+      color: #FFF;
+
+      i {
+        transform: translateX(0);
+        transition: all 0s !important;
+      }
+    }
+  }
+}

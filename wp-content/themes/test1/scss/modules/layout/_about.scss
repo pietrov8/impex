@@ -1,0 +1,91 @@
+.about-page {
+  background-size: cover;
+  min-height: 850px;
+  @include breakpoint(sm) {
+    padding: 122px 0 87px 0;
+    position: relative;
+    min-height: 0;
+    //&:after {
+    //  background: rgba(26,26,26,.75);
+    //  position: absolute;
+    //  left: 0;
+    //  right: 0;
+    //  top:0;
+    //  bottom: 0;
+    //  z-index: 1;
+    //  content: "";
+    //}
+  }
+}
+.about {
+  margin: 59px 0 0 0;
+  max-width: 590px;
+  background-size: cover;
+  @include breakpoint(sm) {
+    margin: 0;
+    max-width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+  .page-title {
+    margin-bottom: 0;
+  }
+  p {
+    font-size: 18px;
+    line-height: 30px;
+    color: #868686;
+    font-weight: 300;
+    letter-spacing: 0;
+    margin: 27px 0;
+    @include breakpoint(sm) {
+      font-size: 14px;
+      line-height: 24px;
+    }
+    &.top {
+      font-size: 20px;
+      line-height: 28px;
+      letter-spacing: -0.05rem;
+      margin: 28px 0 30px 0;
+      color: #FFF;
+      @include breakpoint(sm) {
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+  }
+  a {
+    color: $blue;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  ul {
+    margin: -11px 0 -11px 30px;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    color: #868686;
+    li {
+      position: relative;
+      font-size: 18px;
+      padding: 0 0 6px 20px;
+      @include breakpoint(sm) {
+        font-size: 14px;
+      }
+      &:after {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "\f105";
+        color: $blue;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top:4px;
+      }
+    }
+  }
+}

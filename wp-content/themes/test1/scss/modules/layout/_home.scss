@@ -1,0 +1,461 @@
+.home-top {
+  height: 915px;
+  max-height: 100vh;
+  min-height: 360px;
+  @include breakpoint(lg) {
+    height: 602px;
+    max-height: none;
+    min-height: 0;
+  }
+  @include breakpoint(sm) {
+    height: 506px;
+    max-height: none;
+    min-height: 0;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  h1 {
+    font-size: 60px;
+    line-height: 72px;
+    margin: 82px 0 41px 0;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $blue;
+    @include breakpoint(lg) {
+      font-size: 44px;
+      line-height: 58px;
+      margin: 61px 0 20px 0;
+    }
+    @include breakpoint(sm) {
+      font-size: 28px;
+      line-height: 35px;
+      margin:19px 0 20px 0;
+    }
+    strong {
+      font-size: 72px;
+      letter-spacing: -2px;
+      display: block;
+      color: #FFF;
+      @include breakpoint(lg) {
+        font-size: 56px;
+      }
+      @include breakpoint(sm) {
+        font-size: 36px;
+      }
+    }
+  }
+  &__scroll {
+    position: absolute;
+    left: 50%;
+    color: $blue;
+    bottom: 74px;
+    margin-left: -17px;
+    @include breakpoint(lg) {
+      bottom: 35px;
+    }
+    font-size: 34px;
+    transform: translateX(-50%) translateY(0) !important;
+    animation: animate 1s infinite;
+    i {
+      transform: translateX(0) !important;
+    }
+  }
+
+  @keyframes animate {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+.home-double {
+  background: #1a1a1a;
+  overflow: hidden;
+  position: relative;
+  &__bg-left {
+    position: absolute;
+    left: 0;
+    right: 50%;
+    top:0;
+    bottom: 0;
+    @include breakpoint(lg) {
+      display: none;
+    }
+  }
+  &__bg-right {
+    position: absolute;
+    left: 50%;
+    right: 0;
+    top:0;
+    bottom: 0;
+    background: url("../images/home3.png") 500px 40px no-repeat;
+    @include breakpoint(lg) {
+      display: none;
+    }
+  }
+  .container {
+    position: relative;
+    z-index: 10;
+  }
+  &__left {
+    float: left;
+    display: flex;
+    align-items: flex-end;
+    width: 550/1170*100%;
+    height: 710px;
+    padding-bottom: 74px;
+    position: relative;
+    @include breakpoint(lg) {
+      width: auto;
+      float: none;
+      background: url("../images/home2.png") center no-repeat;
+      background-size: cover;
+      margin: 0 -15px;
+      height: 555px;
+      padding: 0 0 44px 192px;
+      &:after {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top:0;
+        bottom: 0;
+        content: "";
+        z-index: 1;
+        background: rgba(0,0,0,0.5);
+      }
+      .inner {
+        position: relative;
+        z-index: 2;
+      }
+    }
+    @include breakpoint(sm) {
+      height: 349px;
+      padding: 0 0 24px 13px;
+      .inner {
+        max-width: 310px;
+      }
+    }
+    p {
+      font-size: 24px;
+      line-height: 30px;
+      color: #FFF;
+      margin: 0;
+      font-weight: 300;
+      max-width: 430px;
+      @include breakpoint(sm) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+    h3 {
+      line-height: 52px;
+      font-size: 52px;
+      margin: 15px 0;
+      font-weight: 300;
+      color: $blue;
+      @include breakpoint(lg) {
+        font-size: 47px;
+        margin: 9px 0;
+      }
+      @include breakpoint(sm) {
+        font-size: 26px;
+        line-height: 30px;
+        margin: 5px 0;
+      }
+    }
+  }
+  &__right {
+    float: right;
+    width: 495/1170*100%;
+    padding: 109px 0 0 0;
+    @include breakpoint(lg) {
+      width: 100%;
+      float: none;
+      padding: 98px 0 113px 0;
+      background: url(../images/home3.png) top 71px right 37px no-repeat;
+      background-size: 220px auto;
+    }
+    @include breakpoint(sm) {
+      padding: 41px 0 49px 0;
+      background-image: none;
+    }
+    h2 {
+      color: $blue;
+      margin: 0;
+      font-size: 56px;
+      font-weight: 300;
+      @include breakpoint(sm) {
+        font-size: 28px;
+      }
+    }
+    p {
+      color: #868686;
+      font-size: 18px;
+      line-height: 30px;
+      margin: 23px 0 29px 0;
+      @include breakpoint(lg) {
+        max-width: 530px;
+        letter-spacing: -0.4px;
+      }
+      @include breakpoint(sm) {
+        font-size: 14px;
+        line-height: 24px;
+      }
+      &.top {
+        color: #FFF;
+        font-size: 20px;
+        @include breakpoint(sm) {
+          font-size: 18px;
+          line-height: 28px;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}
+
+.home-box {
+  overflow: hidden;
+  &__item {
+    float: left;
+    width: 25%;
+    display: flex;
+    align-items: flex-end;
+    height: 714px;
+    overflow: hidden;
+    @include breakpoint(lg) {
+      width: 50%;
+      height: 480px;
+    }
+    @include breakpoint(sm) {
+      width: 100%;
+    }
+    &:after {
+      transition: all 0.3s;
+    }
+    @media all and (min-width: 1171px) {
+      &:hover {
+        &:after {
+          background: rgba(35,185,218,0.85);
+        }
+        .home-box__inner {
+          h2 {
+            > .fa {
+              display: none;
+            }
+          }
+        }
+        .home-box__inner {
+          margin-bottom: 0 !important;
+          opacity: 1;
+          visibility: visible;
+          .home-box__toggle {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+        .box1__icon {
+          background-image: url("../images/icons/icon1-hover.png");
+        }
+        .box2__icon {
+          background-image: url("../images/icons/icon2-hover.png");
+        }
+        .box3__icon {
+          background-image: url("../images/icons/icon3-hover.png");
+        }
+        .box4__icon {
+          background-image: url("../images/icons/icon4-hover.png");
+        }
+      }
+    }
+    //@media all and (max-width: 1170px) {
+    //  &.open {
+    //    &:after {
+    //      background: rgba(35,185,218,0.85);
+    //    }
+    //    .home-box__inner {
+    //      > .fa {
+    //        display: none;
+    //      }
+    //    }
+    //    .home-box__inner {
+    //      margin-bottom: 0 !important;
+    //      opacity: 1;
+    //      visibility: visible;
+    //      .home-box__toggle {
+    //        opacity: 1;
+    //        visibility: visible;
+    //      }
+    //    }
+    //    .box1__icon {
+    //      background-image: url("../images/icons/icon1-hover.png");
+    //    }
+    //    .box2__icon {
+    //      background-image: url("../images/icons/icon2-hover.png");
+    //    }
+    //    .box3__icon {
+    //      background-image: url("../images/icons/icon3-hover.png");
+    //    }
+    //    .box4__icon {
+    //      background-image: url("../images/icons/icon4-hover.png");
+    //    }
+    //  }
+    //}
+  }
+  &__inner {
+    overflow: hidden;
+    padding-right: 0;
+    left: 50px;
+    right: 56px;
+    bottom: 60px;
+    position: absolute;
+    transition: all 0.3s;
+    @include breakpoint(lg) {
+      left: 29px;
+      right: 23px;
+      bottom: 31px;
+    }
+    @include breakpoint(sm) {
+      left: 21px;
+      right: 23px;
+      bottom: 27px;
+    }
+  }
+  h2 {
+    font-size: 32px;
+    line-height: 36px;
+    text-transform: uppercase;
+    margin: 0 0 0 0;
+    font-weight: 300;
+    color: #FFF;
+    position: relative;
+    padding-right: 20px;
+    @include breakpoint(sm) {
+      font-size: 28px;
+      line-height: 33px;
+    }
+    > .fa {
+      color: $blue;
+      font-size: 24px;
+      position: absolute;
+      right: 4px;
+      bottom: 6px;
+    }
+  }
+  p {
+    font-size: 18px;
+    color: #FFF;
+    line-height: 30px;
+    @include breakpoint(sm) {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+  &__toggle {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+    overflow: hidden;
+    .btn-white {
+      margin: 0 0 5px 0;
+      font-size: 13px;
+      padding: 16px 26px 16px 32px;
+    }
+  }
+  .icon {
+    display: inline-block;
+    margin-bottom: 24px;
+    transition: all 0.3s;
+  }
+  .box1 {
+    &__icon {
+      background: url("../images/icons/icon1.png");
+      width: 64px;
+      height: 72px;
+    }
+  }
+  .box2 {
+    &__icon {
+      background: url("../images/icons/icon2.png");
+      width: 64px;
+      height: 78px;
+    }
+  }
+  .box3 {
+    &__icon {
+      background: url("../images/icons/icon3.png");
+      width: 69px;
+      height: 69px;
+    }
+  }
+  .box4 {
+    &__icon {
+      background: url("../images/icons/icon4.png");
+      width: 82px;
+      height: 80px;
+    }
+  }
+}
+
+.news-home {
+  background: #1a1a1a;
+  overflow: hidden;
+  padding: 93px 0 133px 0;
+  @include breakpoint(lg) {
+    padding: 37px 0 18px 0;
+  }
+  @include breakpoint(sm) {
+    padding: 47px 0 12px 0;
+  }
+  h2 {
+    font-size: 56px;
+    color: $blue;
+    font-weight: 300;
+    margin: 0 0 0 0;
+    display: inline-block;
+    @include breakpoint(sm) {
+      font-size: 28px;
+    }
+  }
+  .btn-gray {
+    float: right;
+    margin: 21px 0 0 0;
+    @include breakpoint(sm) {
+      margin: -2px 0 0 0;
+      padding: 16px 21px 16px 25px;
+    }
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin: 89px 0 0 0;
+    @include breakpoint(lg) {
+      margin: 66px 0 0 0;
+      display: block;
+    }
+    @include breakpoint(sm) {
+      margin: 44px 0 0 0;
+    }
+    .news-thumb {
+      width: 48%;
+      &:nth-child(2) {
+        width: 45.2%;
+      }
+      @include breakpoint(lg) {
+        width: 100% !important;
+        margin-bottom: 57px;
+      }
+      @include breakpoint(sm) {
+        margin-bottom: 36px;
+      }
+    }
+  }
+}

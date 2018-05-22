@@ -1,0 +1,225 @@
+.footer {
+  background: url("../images/footer-bg.png");
+  background-size: cover;
+  background-position: center;
+
+  .container {
+    position: relative;
+    padding-top: 68px;
+    padding-bottom: 25px;
+    @include breakpoint(lg) {
+      padding-top: 46px;
+      padding-bottom: 25px;
+    }
+    @include breakpoint(sm) {
+      display: flex;
+      flex-wrap: wrap;
+      padding-bottom: 37px;
+    }
+    &:after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+  }
+  .scroll-top {
+    display: none;
+    position: absolute;
+    right: -195px;
+    top: -39px;
+    //display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 58px;
+    height: 58px;
+    color: $blue;
+    background: #2e2e2e;
+    z-index: 49;
+    i {
+      position: absolute;
+      left: 50%;
+      top:50%;
+      margin: -7px;
+    }
+    &:hover {
+      background: $blue;
+      color: #FFF;
+      i {
+        transform: translateX(0) translateY(-5px);
+      }
+    }
+    @include breakpoint(vb) {
+      right: 15px;
+    }
+    @include breakpoint(md) {
+      display: none;
+    }
+  }
+  .col1,.col2,.col3,.col4,.col5,.col6 {
+    float: left;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    a {
+      font-size: 14px;
+      color: $gray-text;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      display: block;
+      margin-top: 9px;
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+  .address {
+    background: url("../images/marker.png") left top no-repeat;
+    padding: 0 0 0 47px;
+    color: $gray-text;
+    font-size: 14px;
+    margin: 12px 0 0 0;
+    line-height: 21px;
+  }
+  .tel {
+    background: url("../images/phone-blue.png") left top no-repeat;
+    padding: 0 0 0 49px;
+    margin: 13px 7px 0 0;
+    font-size: 32px;
+    color: $blue;
+    font-weight: bold;
+    display: block;
+    @include breakpoint(lg) {
+      font-size: 26px;
+    }
+    a {
+      color: $blue;
+    }
+    strong {
+      color: #FFF;
+      margin: 0 5px 0 0;
+      font-size: 20px;
+      display: inline-block;
+      vertical-align: top;
+      @include breakpoint(lg) {
+        font-size: 16px;
+        margin: 0 2px 0 0;
+      }
+    }
+  }
+  .mail {
+    display: block;
+    font-size: 13px;
+    color: $blue;
+    text-align: right;
+    margin: 7px 6px 0 0;
+    text-decoration: none;
+    @include breakpoint(lg) {
+      margin-top: 0;
+    }
+    @include breakpoint(sm) {
+      text-align: left;
+      padding-left: 48px;
+      display: inline-block;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .col1 {
+    width: 30%;
+    img {
+      max-width: 260px;
+    }
+    @include breakpoint(lg) {
+      width: 31%;
+      img {
+        max-width: 100%;
+        @include breakpoint(sm) {
+          max-width: 222px;
+        }
+      }
+    }
+    @include breakpoint(sm) {
+      width: 100%;
+    }
+  }
+  .col2 {
+    width: 20.8%;
+    @include breakpoint(lg) {
+      margin-left: 8.5%;
+    }
+    @include breakpoint(sm) {
+      width: 100%;
+      order: 5;
+      margin: 31px 0 47px 0;
+    }
+  }
+  .col3 {
+    width: 20%;
+    @include breakpoint(lg) {
+      float: right;
+      width: 251px;
+    }
+    @include breakpoint(sm) {
+      width: 100%;
+      margin: 19px 0 3px 0;
+    }
+  }
+  .col4 {
+    float: right;
+    @include breakpoint(lg) {
+      clear: right;
+      margin-top: 16px;
+    }
+    @include breakpoint(sm) {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+  .col5 {
+    width: 50%;
+    color: #666361;
+    font-size: 14px;
+    margin: 81px 0 10px 0;
+    @include breakpoint(lg) {
+      margin-top: 70px;
+    }
+    @include breakpoint(sm) {
+      width: 100%;
+      margin: 0;
+      order: 6;
+    }
+    a {
+      color: $blue;
+      text-decoration: none;
+      font-size: 14px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .col6 {
+    float: right;
+    clear: right;
+    margin: 81px 0 10px 0;
+    @include breakpoint(lg) {
+      margin-top: 70px;
+    }
+    @include breakpoint(sm) {
+      width: 100%;
+      margin: 0;
+      order: 7;
+
+    }
+    a {
+      color: $blue;
+      font-size: 14px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

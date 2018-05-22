@@ -1,0 +1,50 @@
+.pagination {
+  text-align: center;
+  margin: 69px 0 0 0;
+  font-size: 0;
+  a {
+    display: inline-block;
+    vertical-align: top;
+    background: #2e2e2e;
+    padding: 15px 20px;
+    color: $blue;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    transition: all 0.3s;
+    margin: 0 2px;
+    &:hover,
+    &.current {
+      background: $blue;
+      color: #FFF;
+    }
+    &.prev {
+      padding: 15px 20px 15px 20px;
+      i {
+        margin: 0 16px 0 0;
+        @include breakpoint(sm) {
+          margin: 0;
+        }
+      }
+      &:hover {
+        i {
+          transform: translateX(-10px);
+        }
+      }
+    }
+    &.next {
+      padding: 15px 20px 15px 32px;
+      i {
+        margin: 0 0 0 16px;
+        @include breakpoint(sm) {
+          margin: 0;
+        }
+      }
+    }
+    span {
+      @include breakpoint(sm) {
+        display: none;
+      }
+    }
+  }
+}

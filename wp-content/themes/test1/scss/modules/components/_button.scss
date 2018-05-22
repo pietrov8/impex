@@ -1,0 +1,97 @@
+.btn-blue {
+  display: inline-block;
+  vertical-align: top;
+  color: #FFF;
+  background: $blue;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  text-transform: uppercase;
+  padding: 17px 26px 18px 32px;
+  @include breakpoint(lg) {
+    padding: 16px 20px 16px 24px;
+    font-size: 13px;
+  }
+  i {
+    margin: 0 0 0 16px;
+    font-size: 14px;
+    transition: transform 0.3s;
+  }
+  &:hover {
+    background: #FFF;
+    color: $blue;
+    i {
+      transform: translateX(5px);
+    }
+  }
+}
+
+.btn-gray {
+  display: inline-block;
+  vertical-align: top;
+  color: $blue;
+  background: #2e2e2e;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  text-transform: uppercase;
+  padding: 17px 26px 18px 32px;
+  border: none;
+  transition: all 0.3s;
+  @include breakpoint(lg) {
+    font-size: 13px;
+    padding: 16px 26px 16px 32px;
+  }
+  &--small {
+    font-size: 13px;
+    padding: 16px 26px 16px 32px;
+  }
+  i {
+    margin: 0 0 0 16px;
+    font-size: 14px;
+    transition: transform 0.3s;
+  }
+  &:hover {
+    background: $blue;
+    color: #FFF;
+    i {
+      transform: translateX(5px);
+    }
+  }
+}
+.btn-right {
+  &:hover {
+    i {
+      transform: translateX(-5px);
+    }
+  }
+  i {
+    margin: 0 11px 0 -9px;
+    font-size: 14px;
+    transition: transform 0.3s;
+  }
+}
+
+.btn-white {
+  display: inline-block;
+  vertical-align: top;
+  color: $blue;
+  background: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  text-transform: uppercase;
+  padding: 17px 26px 18px 32px;
+  i {
+    margin: 0 0 0 16px;
+    font-size: 14px;
+    transition: transform 0.3s;
+  }
+  &:hover {
+    background: $blue;
+    color: #FFF;
+    i {
+      transform: translateX(5px);
+    }
+  }
+}
